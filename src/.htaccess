@@ -1,0 +1,2 @@
+ErrorDocument 401 public/login.html
+# END of conf file / .htaccess
