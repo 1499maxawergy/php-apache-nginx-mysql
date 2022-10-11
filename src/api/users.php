@@ -33,6 +33,7 @@ switch($requestMethod){
             $password = $obj->{'password'};
             $email = $obj->{'email'};
             $query_result = $con->query("SELECT * FROM users WHERE username='".$username."'");
+            $result = $query_result->fetch_row();
             if (!empty($result)){
                 $answer["status"] = "Error. User with this username already exists.";
             } else {
