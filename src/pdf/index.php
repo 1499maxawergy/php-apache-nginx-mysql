@@ -1,7 +1,7 @@
 
 <?php
-$ru_lang = ["Наименование", "Автор", "Скачать", "Добавить файл", "Светлая", "Темная", "Русский", "Английский", "Файл", "Загрузить", "*Клик*", "Введите свое имя:", "Язык", "Тема", "Обменник"];
-$en_lang = ["Name", "Author", "Download", "Add File", "Light", "Dark", "Russian", "English", "File", "Upload", "*Click*", "Enter your name:", "Language", "Theme", "Exchanger"];
+$ru_lang = ["Наименование", "Автор", "Скачать", "Добавить файл", "Светлая", "Темная", "Русский", "Английский", "Файл", "Загрузить", "*Клик*", "Введите свое имя:", "Язык", "Тема", "Обменник", "Сменить имя"];
+$en_lang = ["Name", "Author", "Download", "Add File", "Light", "Dark", "Russian", "English", "File", "Upload", "*Click*", "Enter your name:", "Language", "Theme", "Exchanger", "Change name"];
 $dark_theme = ['table-dark', 'grey', 'bg-dark'];
 $light_theme = ['table-light', 'white', 'bg-light'];
 
@@ -26,7 +26,10 @@ function addNavBar($list, $theme){
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#" onclick="var inputname = prompt(\''.$list[11].'\');document.cookie=\'name=\'+ inputname;" >'.$list[15].'</a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             '.$list[12].'
