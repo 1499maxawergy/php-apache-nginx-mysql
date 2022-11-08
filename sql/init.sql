@@ -21,5 +21,14 @@ CREATE TABLE IF NOT EXISTS tickets (
     PRIMARY KEY (ID)
 );
 
+CREATE TABLE IF NOT EXISTS files (
+    ID INT(11) NOT NULL  AUTO_INCREMENT,
+    content LONGBLOB NOT NULL,
+    author VARCHAR(32) NOT NULL,
+    title VARCHAR(256) NOT NULL,
+    `type` VARCHAR(256) NOT NULL,
+    PRIMARY KEY (ID)
+);
+
 INSERT INTO users (username, password, email) VALUES ("Maxawergy", "$1$LgKNOvfK$zk5dmsUyzksmrPFjlxGNs1", "maxawergy@yandex.ru");
 INSERT INTO tickets (price, source, destination, title) VALUES (23000, "Moscow", "Astana", "Low-cost to Kazakhstan");

@@ -9,6 +9,7 @@ services:
     volumes:
       - ./src:/var/www/myserver/html
       - ./httpd/httpd.conf:/etc/apache2/sites-enabled/000-default.conf
+      - ./httpd/php.ini:/usr/local/etc/php/php.ini
     depends_on:
       mysql:
         condition: service_healthy
@@ -38,6 +39,16 @@ services:
       test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
       timeout: 1s
       retries: 10
+
+  redis:
+    container_name: REDIS
+    hostname: REDIS
+    build:
+      ./redis
+    volumes:
+      - "./redis:/etc/redis"
+    depends_on:
+      - apache
 
 volumes:
   dbdata:
