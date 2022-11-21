@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="StackTest" file="/var/www/myserver/html/test/test.php" tests="1" assertions="330" errors="0" failures="0" skipped="0" time="0.000390">
+    <testcase name="test" class="StackTest" classname="StackTest" file="/var/www/myserver/html/test/test.php" line="34" assertions="330" time="0.000390"/>
+  </testsuite>
+</testsuites>
