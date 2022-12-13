@@ -1,0 +1,7 @@
+{
+    "require": {
+        "amenadiel/jpgraph": "^4.1",
+        "fakerphp/faker": "^1.20",
+        "phpunit/phpunit": "^8.5"
+    }
+}
